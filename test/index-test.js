@@ -5,12 +5,10 @@ const path = require('path')
 
 
 describe('index', () => {
-  // there's stuff in here, too
   const html = '<div></div>'
   const src = path.resolve(__dirname, '..', 'index.js')
 
   it('calls console.error("halp")', done => {
-    // this is where the test are!
     const spy = expect.spyOn(console, 'error').andCallThrough()
 
     jsdom.env(html, [src], {
